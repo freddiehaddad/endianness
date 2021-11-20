@@ -23,3 +23,15 @@ opposite, storing the LSB at the lowest address and MSB at the highest.
 |            03 |            DD |    |            03 |            AA |
 +---------------+---------------+    +---------------+---------------+
 ```
+
+## Sample Output
+
+```text
+$ ./endianness 
+Little-endian detected
+Byte ordering for address: 0x7ffc58d6f638 value: 0xaabbccdd
+address: 0x7ffc58d6f638 value: 0xdd
+address: 0x7ffc58d6f639 value: 0xcc
+address: 0x7ffc58d6f63a value: 0xbb
+address: 0x7ffc58d6f63b value: 0xaa
+```

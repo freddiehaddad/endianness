@@ -27,15 +27,14 @@
 
 // ---------------------------------------------------------------- Entry Point
 //
-// Writes the byte ordering to stdout and the endianess detected on the
-// machine.
+// Writes the detected endianness and byte ordering to stdout on the machine.
 //
 
 int main(int arg, char *argv[])
 {
 	unsigned int value = 0xAABBCCDDu;
 	unsigned int mask = 0x000000FFu;
-	const char *endianess = NULL;
+	const char *endianness = NULL;
 
 	unsigned char *b = (unsigned char *)&value;
 	unsigned char *e = b + sizeof(unsigned int);
@@ -44,14 +43,14 @@ int main(int arg, char *argv[])
 
 	if (*b == lsb)
 	{
-		endianess = "Little";
+		endianness = "Little";
 	}
 	else
 	{
-		endianess = "Big";
+		endianness = "Big";
 	}
 
-	printf("%s-endian detected\n", endianess);
+	printf("%s-endian detected\n", endianness);
 
 	printf("Byte ordering for address: %p value: 0x%x\n", &value, value);
 	while (b != e)
