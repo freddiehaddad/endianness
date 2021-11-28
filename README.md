@@ -11,16 +11,16 @@ opposite, storing the LSB at the lowest address and MSB at the highest.
    |     +-- LSB
    |     |
    v     v
-0xAABBCCDD  (4-byte word value)
+0xA0B0C0D0  (4-byte word value)
 
                       Big-endian                        Little-endian
 +---------------+---------------+    +---------------+---------------+
 | Address (hex) |   Value (hex) |    | Address (hex) |   Value (hex) |
 +---------------+---------------+    +---------------+---------------+
-|            00 |            AA |    |            00 |            DD |
-|            01 |            BB |    |            01 |            CC |
-|            02 |            CC |    |            02 |            BB |
-|            03 |            DD |    |            03 |            AA |
+|            00 |            A0 |    |            00 |            D0 |
+|            01 |            B0 |    |            01 |            C0 |
+|            02 |            C0 |    |            02 |            B0 |
+|            03 |            D0 |    |            03 |            A0 |
 +---------------+---------------+    +---------------+---------------+
 ```
 
@@ -29,9 +29,9 @@ opposite, storing the LSB at the lowest address and MSB at the highest.
 ```text
 $ ./endianness 
 Little-endian detected
-Byte ordering for address: 0x7ffc58d6f638 value: 0xaabbccdd
-address: 0x7ffc58d6f638 value: 0xdd
-address: 0x7ffc58d6f639 value: 0xcc
-address: 0x7ffc58d6f63a value: 0xbb
-address: 0x7ffc58d6f63b value: 0xaa
+Byte ordering for address: 0x7ffc58d6f638 value: 0xa0b0c0d0
+address: 0x7ffc58d6f638 value: 0xd0
+address: 0x7ffc58d6f639 value: 0xc0
+address: 0x7ffc58d6f63a value: 0xb0
+address: 0x7ffc58d6f63b value: 0xa0
 ```
