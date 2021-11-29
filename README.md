@@ -44,7 +44,6 @@ Running the program directly:
 
 ```BASH
 $ ./endianness
-$ echo $?
 ```
 
 Debugging can be done with GDB:
