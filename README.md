@@ -24,6 +24,35 @@ opposite, storing the LSB at the lowest address and MSB at the highest.
 +---------------+---------------+    +---------------+---------------+
 ```
 
+## Building
+
+The C Standard Library is required for compilation.  On Ubuntu Linux or Debian based distributions, dependencies can be installed with:
+
+```BASH
+$ sudo apt install build-essential
+```
+
+Compiling the program:
+
+```BASH
+$ gcc -g endianness.c -o endianness
+```
+
+## Running and Debugging
+
+Running the program directly:
+
+```BASH
+$ ./endianness
+$ echo $?
+```
+
+Debugging can be done with GDB:
+
+```BASH
+$ gdb ./endianness
+```
+
 ## Sample Output
 
 ```text
